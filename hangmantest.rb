@@ -21,6 +21,13 @@ def test_assert_that_wombat_is_six_blanks
 	assert_equal(["_", "_", "_", "_", "_", "_"], word_blanks(secret_word))
 end
 
+def test_assert_that_d_is_in_dog
+	secret_word = "dog
+	"
+	guess = "d"
+	assert_equal(["d", "_", "_"], guess_letter(secret_word, guess))
+end
+
 end
 
 

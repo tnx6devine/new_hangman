@@ -9,3 +9,7 @@ def word_blanks(secret_word)
 	end
 	blanks
 end
+
+
+
+

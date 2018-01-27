@@ -1,0 +1,6 @@
+Program file lines 1-3 and Test file lines 9-12
+	Counts length of secret word
+
+Program file lines 5-11 and Test file lines 14-22
+	Creates an array with an underscore to represent each letter of the secret word.
+
