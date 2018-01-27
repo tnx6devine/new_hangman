@@ -3,5 +3,5 @@ def word_setup(secret_word)
 end
 
 def word_blanks(secret_word)
-
-	end
+	blanks = []
+end
