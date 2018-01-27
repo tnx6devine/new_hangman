@@ -16,6 +16,11 @@ def test_assert_that_dog_is_three_underscores
 	assert_equal(["_", "_", "_"], word_blanks(secret_word))
 end
 
+def test_assert_that_wombat_is_six_blanks
+	secret_word = "wombat"
+	assert_equal(["_", "_", "_", "_", "_", "_"], word_blanks(secret_word))
+end
+
 end
 
 
