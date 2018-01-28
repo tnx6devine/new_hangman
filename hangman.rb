@@ -34,7 +34,14 @@ def guess_letter(secret_word, guess)
 
 end
 
-
+def wrong_guess_tracker(secret_word, guess)
+wrong_counter = 0
+guess_letter(secret_word, guess)
+if secret_word.include?(guess) == false
+	wrong_counter += 1
+end
+wrong_counter
+end
 
 
 
