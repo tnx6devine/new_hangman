@@ -9,9 +9,11 @@ def word_blanks(secret_word)
 	end
 	blanks
 end
-
-def guess_letter(secret_word, guess)
+puts "enter guess"
+	$guess = gets.chomp
+def guess_letter(secret_word)
 	secret_word = secret_word.split("")
+	
 	# assuming that secret word is now an array
 	# ["d", "o", "g"]
 	updated_array = word_blanks(secret_word)
@@ -22,8 +24,8 @@ def guess_letter(secret_word, guess)
 
 	until array_counter == word_length
 # waiting for the end of the word
-		if guess == secret_word[array_counter]
-			updated_array[array_counter] = guess
+		if $guess == secret_word[array_counter]
+			updated_array[array_counter] = $guess
 			# checking each letters position
 		end
 		array_counter += 1
@@ -34,16 +36,22 @@ def guess_letter(secret_word, guess)
 
 end
 
-def wrong_guess_tracker(secret_word, guess)
+def wrong_guess_tracker(secret_word)
 wrong_counter = 0
-guess_letter(secret_word, guess)
-if secret_word.include?(guess) == false
+guess_letter(secret_word)
+if secret_word.include?($guess) == false
 	wrong_counter += 1
 end
 wrong_counter
 end
 
-
+def determine_loser(secret_word)
+	until wrong_guess_tracker(secret_word) == 6
+		wrong_guess_tracker(secret_word)
+	end 
+	puts "You lose"
+	true
+end
 
 
 
