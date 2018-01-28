@@ -19,11 +19,19 @@ def guess_letter(secret_word, guess)
 	updated_array = word_blanks(secret_word)
 	# creating a variable to store the array from previous function
 	# ["_", "_", "_"]
+	array_counter = 0
+	word_length = word_setup(secret_word)
 
-if guess == secret_word[0]
+until array_counter == word_length
+
+if guess == secret_word[array_counter]
 	# guess of "d" is equal to "d" then
-	updated_array[0] = guess
+	updated_array[array_counter] = guess
 end
+array_counter += 1
+end
+
+
 updated_array
 
 end

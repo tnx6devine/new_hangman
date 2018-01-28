@@ -33,6 +33,12 @@ def test_assert_that_o_is_in_dog
 	assert_equal(["_", "o", "_"], guess_letter(secret_word, guess))
 end
 
+def test_assert_that_w_is_not_in_dog
+	secret_word = "dog"
+	guess = "w"
+	assert_equal(["_", "_", "_"], guess_letter(secret_word, guess))
+end
+
 end
 
 
