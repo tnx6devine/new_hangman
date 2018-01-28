@@ -20,19 +20,22 @@ def guess_letter(secret_word, guess)
 	# creating a variable to store the array from previous function
 	# ["_", "_", "_"]
 	array_counter = 0
+	wrong_counter = 0
 	word_length = word_setup(secret_word)
 
-until array_counter == word_length
+	until array_counter == word_length
 
-if guess == secret_word[array_counter]
-	# guess of "d" is equal to "d" then
-	updated_array[array_counter] = guess
-end
-array_counter += 1
-end
+		if guess == secret_word[array_counter]
+			updated_array[array_counter] = guess
+		else
+			wrong_counter += 1
+		end
+		array_counter += 1
+	end
 
+	puts wrong_counter
 
-updated_array
+	updated_array
 
 end
 

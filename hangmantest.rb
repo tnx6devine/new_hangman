@@ -39,7 +39,24 @@ def test_assert_that_w_is_not_in_dog
 	assert_equal(["_", "_", "_"], guess_letter(secret_word, guess))
 end
 
+def test_assert_that_wrong_guess_adds_one_to_wrong_counter
+	secret_word = "dog"
+	guess = "f"
+	assert_equal(1, wrong_guess_tracker(secret_word, guess))
+
 end
+
+
+
+end
+
+
+
+
+
+
+
+
 
 
 
